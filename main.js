@@ -95,6 +95,7 @@ async function fightMove1(pokeURL1) {
     let pokemonSprite = data.sprites.front_default;
     let pokemonImage = document.querySelector("#pokemon-1-image");
     pokemonImage.setAttribute("src", pokemonSprite);
+    pokemonMove1 = pokemonMove1.toUpperCase();
     moveArray1.push(pokemonMove1);
 }
 
@@ -113,6 +114,7 @@ async function fightMove2(pokeURL2) {
     let pokemonSprite = data.sprites.front_default;
     let pokemonImage = document.querySelector("#pokemon-2-image");
     pokemonImage.setAttribute("src", pokemonSprite);
+    pokemonMove2 = pokemonMove2.toUpperCase();
     moveArray2.push(pokemonMove2);
 }
 
@@ -156,34 +158,3 @@ document.querySelector('#fight-button').addEventListener("click", function () {
     }, 1500);
 
 });
-
-// setTimeout(function () {
-//     if ()
-// });
-
-// if (randomPoints1 > randomPoints2) {
-//     alert("Pokemon trainer 1 wins!");
-// } else {
-//     alert("Pokemon trainer 2 wins!");
-// }
-
-
-
-
-
-// button1.addEventListener("click",
-
-// Create function which tracks pokemon HP and takes attack points from total HP
-//  - When pokemon HP reaches 0, confirm box OR something on HTML to state who won and if you want to play again
-
-
-
-
-
-// console.log(pokemon1Move, pokemon2Move);
-
-// LOOK AT IS REFACTORING Separate Fight button
-//      - access the result of getPokemon function
-//      - use result to fetch data for Pokemon from API 
-//      - set response to data
-//      - navigate to data we want - what data do we want
