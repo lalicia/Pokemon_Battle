@@ -45,7 +45,9 @@ async function getPokemon() {
     let num2 = Math.floor(randomNum2 * 100);
     // Use number to pick random pokemon
     let pokemonName1 = (data.results[num1].name);
+    pokemonName1 = pokemonName1.toUpperCase();
     let pokemonName2 = (data.results[num2].name);
+    pokemonName2 = pokemonName2.toUpperCase();
 
     // Get indiv pokemon URLs from data
     let pokeURL1 = data.results[num1].url;
