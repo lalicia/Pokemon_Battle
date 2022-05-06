@@ -139,15 +139,33 @@ document.querySelector('#fight-button').addEventListener("click", function () {
         // Set innerText "attack points:" + random num
         pokemonPoints1.innerText = `Attack Points: ${randomPoints1}`;
         pokemonPoints2.innerText = `Attack Points: ${randomPoints2}`;
+        let pointsArray = [];
+        pointsArray.push(randomPoints1);
+        pointsArray.push(randomPoints2);
         // Add timeout
+        setTimeout(function () {
+            if (randomPoints1 > randomPoints2) {
+                alert("Pokemon trainer 1 wins!");
+            } else if (randomPoints1 < randomPoints2) {
+                alert("Pokemon trainer 2 wins!");
+            } else {
+                alert("It's a draw!");
+            }
+
+        }, 750);
     }, 1500);
+
 });
 
-if (randomPoints1 > randomPoints2) {
-    alert("Pokemon trainer 1 wins!");
-} else {
-    alert("Pokemon trainer 2 wins!");
-}
+// setTimeout(function () {
+//     if ()
+// });
+
+// if (randomPoints1 > randomPoints2) {
+//     alert("Pokemon trainer 1 wins!");
+// } else {
+//     alert("Pokemon trainer 2 wins!");
+// }
 
 
 
