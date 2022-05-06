@@ -33,34 +33,33 @@
 //      - 
 
 
-// Return Pokemon 1
-async function masterPokemonList() {
+// Return Pokemon & display names
+async function pokemon1() {
+    // Get full list of pokemon
     let response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=150&offset=0");
     let data = await response.json();
-    let randomNum = Math.random()
-    let num = Math.floor(randomNum * 100);
-    console.log(data.results[num].name);
-    let pokemonName = (data.results[num].name);
-    let h3 = document.querySelector('#pokemon-1-name');
-    h3.innerText = pokemonName;
-
+    // Pick random number
+    let randomNum1 = Math.random();
+    let randomNum2 = Math.random();
+    let num1 = Math.floor(randomNum1 * 100);
+    let num2 = Math.floor(randomNum2 * 100);
+    // Use number to pick random pokemon
+    let pokemonName1 = (data.results[num1].name);
+    let pokemonName2 = (data.results[num2].name);
+    // Set h3 as pokemon name
+    let firsth3 = document.querySelector('#pokemon-1-name');
+    let secondh3 = document.querySelector('#pokemon-2-name');
+    firsth3.innerText = pokemonName1;
+    secondh3.innerText = pokemonName2;
 }
 
-
-
+// Click button to return pokemon
 let button1 = document.querySelector('#get-pokemon-1');
-button1.addEventListener("click", masterPokemonList);
+button1.addEventListener("click", pokemon1);
+
+// If same pokemon returned return different ones??
 
 
-
-// document.querySelector('#pokemon-1-name').innerText = ;
-
-// Get pokemon button
-//      - Pick random pokemon name from masterPokemonList();
 
 // Fight button
 //      - 
-
-async function getPokemonDetails(url) {
-    let response = await fetch(url)
-}
