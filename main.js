@@ -30,7 +30,6 @@
 
 // - Fight button
 //      - Pick random move from JSON data for each
-//      - 
 
 
 // Return Pokemon & display names
@@ -47,15 +46,15 @@ async function getPokemon() {
     // Pick random number
     let randomNum1 = Math.random();
     let randomNum2 = Math.random();
-    let num1 = Math.floor(randomNum1 * 100);
-    let num2 = Math.floor(randomNum2 * 100);
+    let num1 = Math.floor(randomNum1 * 150);
+    let num2 = Math.floor(randomNum2 * 150);
     // Use number to pick random pokemon
     let pokemonName1 = (data.results[num1].name);
     pokemonName1 = pokemonName1.toUpperCase();
     let pokemonName2 = (data.results[num2].name);
     pokemonName2 = pokemonName2.toUpperCase();
 
-    // Get indiv pokemon URLs from data
+    // Get individual pokemon URLs from data
     let pokeURL1 = data.results[num1].url;
     let pokeURL2 = data.results[num2].url;
 
@@ -154,7 +153,7 @@ document.querySelector('#fight-button').addEventListener("click", function () {
                 alert("It's a draw!");
             }
 
-        }, 750);
+        }, 1200);
     }, 1500);
 
 });
