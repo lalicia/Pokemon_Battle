@@ -82,7 +82,6 @@ async function fightMove1(pokeURL1) {
     h4.innerText = pokemonMove1;
     // Return sprite to image
     let pokemonSprite = data.sprites.front_default;
-    console.log(pokemonSprite);
     let pokemonImage = document.querySelector("#pokemon-1-image");
     pokemonImage.setAttribute("src", pokemonSprite);
 }
@@ -91,6 +90,7 @@ async function fightMove2(pokeURL2) {
     // fetch info for pokemon selected by button
     let response = await fetch(pokeURL2);
     let data = await response.json();
+    console.log(data);
     // selects the moves from the data and picks a random number
     let moveSet = data.moves;
     let randomNum1 = Math.random();
@@ -102,7 +102,6 @@ async function fightMove2(pokeURL2) {
     h4.innerText = pokemonMove2;
     // Return sprite to image
     let pokemonSprite = data.sprites.front_default;
-    console.log(pokemonSprite);
     let pokemonImage = document.querySelector("#pokemon-2-image");
     pokemonImage.setAttribute("src", pokemonSprite);
 }
