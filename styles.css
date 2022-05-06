@@ -13,8 +13,10 @@ img {
     width: auto;
 }
 
+
 h1,
-h3 {
+h3,
+h4 {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -36,10 +38,16 @@ h1 {
 
 #pokemon-1 {
     margin-right: 50px;
+    /* min-width: 300px; */
+    display: flex;
+    justify-content: center;
 }
 
 #pokemon-2 {
     margin-left: 50px;
+    /* min-width: 300px; */
+    display: flex;
+    justify-content: center;
 }
 
 .button {

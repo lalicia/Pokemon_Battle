@@ -35,6 +35,12 @@
 
 // Return Pokemon & display names
 async function getPokemon() {
+    moveArray1 = [];
+    moveArray2 = [];
+    document.querySelector('#pokemon-1-move').innerText = " ";
+    document.querySelector('#pokemon-2-move').innerText = " ";
+    document.querySelector('#pokemon-1-points').innerText = " ";
+    document.querySelector('#pokemon-2-points').innerText = " ";
     // Get full list of pokemon
     let response = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=150&offset=0");
     let data = await response.json();
@@ -64,13 +70,16 @@ async function getPokemon() {
     fightMove2(pokeURL2);
 }
 // Click button to return pokemon
+let moveArray1 = [];
+let moveArray2 = [];
 let button1 = document.querySelector('#get-pokemon');
 button1.addEventListener("click", getPokemon);
 
+
 // If same pokemon returned return different ones??
 
-let moveArray1 = [];
-let moveArray2 = [];
+
+
 
 async function fightMove1(pokeURL1) {
     // fetch info for pokemon selected by button
@@ -113,6 +122,38 @@ async function fightMove2(pokeURL2) {
 //  - Create inline function with event listener
 //  - Create element to display attack points
 
+document.querySelector('#fight-button').addEventListener("click", function () {
+    let pokemonMoveFirst = document.querySelector('#pokemon-1-move');
+    let pokemonMoveSecond = document.querySelector('#pokemon-2-move');
+    pokemonMoveFirst.innerText = `Attack Type: ${moveArray1}`;
+    pokemonMoveSecond.innerText = `Attack Type: ${moveArray2}`;
+    setTimeout(function () {
+        // Target pokemon points h4
+        let pokemonPoints1 = document.querySelector('#pokemon-1-points');
+        let pokemonPoints2 = document.querySelector('#pokemon-2-points');
+        // Math.random * 100
+        let randomNum1 = Math.random();
+        let randomNum2 = Math.random();
+        let randomPoints1 = Math.floor(randomNum1 * 100);
+        let randomPoints2 = Math.floor(randomNum2 * 100);
+        // Set innerText "attack points:" + random num
+        pokemonPoints1.innerText = `Attack Points: ${randomPoints1}`;
+        pokemonPoints2.innerText = `Attack Points: ${randomPoints2}`;
+        // Add timeout
+    }, 1500);
+});
+
+if (randomPoints1 > randomPoints2) {
+    alert("Pokemon trainer 1 wins!");
+} else {
+    alert("Pokemon trainer 2 wins!");
+}
+
+
+
+
+
+// button1.addEventListener("click",
 
 // Create function which tracks pokemon HP and takes attack points from total HP
 //  - When pokemon HP reaches 0, confirm box OR something on HTML to state who won and if you want to play again
