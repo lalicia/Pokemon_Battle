@@ -1,3 +1,44 @@
 body {
     background-color: rgb(248, 248, 130);
+
+}
+
+img {
+    min-height: 200px;
+    width: auto;
+}
+
+h1,
+h3 {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.main-body {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    min-height: 300px;
+}
+
+#pokemon-1 {
+    margin-right: 50px;
+}
+
+#pokemon-2 {
+    margin-left: 50px;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#get-pokemon {
+    max-height: 30px;
+    margin-bottom: 30px;
 }

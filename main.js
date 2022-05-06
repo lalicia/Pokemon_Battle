@@ -46,7 +46,7 @@ async function getPokemon() {
     // Use number to pick random pokemon
     let pokemonName1 = (data.results[num1].name);
     let pokemonName2 = (data.results[num2].name);
-    
+
     // Get indiv pokemon URLs from data
     let pokeURL1 = data.results[num1].url;
     let pokeURL2 = data.results[num2].url;
@@ -67,6 +67,9 @@ button1.addEventListener("click", getPokemon);
 
 // If same pokemon returned return different ones??
 
+let moveArray1 = [];
+let moveArray2 = [];
+
 async function fightMove1(pokeURL1) {
     // fetch info for pokemon selected by button
     let response = await fetch(pokeURL1);
@@ -74,16 +77,14 @@ async function fightMove1(pokeURL1) {
     // selects the moves from the data and picks a random number
     let moveSet = data.moves;
     let randomNum1 = Math.random();
-    let num1 = Math.floor(randomNum1 * moveSet.length-1);
+    let num1 = Math.floor(randomNum1 * moveSet.length - 1);
     // Use number to pick random move
     let pokemonMove1 = (data.moves[num1].move.name);
-    // Assign move to h4
-    let h4 = document.querySelector('#pokemon-1-move');
-    h4.innerText = pokemonMove1;
     // Return sprite to image
     let pokemonSprite = data.sprites.front_default;
     let pokemonImage = document.querySelector("#pokemon-1-image");
     pokemonImage.setAttribute("src", pokemonSprite);
+    moveArray1.push(pokemonMove1);
 }
 
 async function fightMove2(pokeURL2) {
@@ -94,17 +95,31 @@ async function fightMove2(pokeURL2) {
     // selects the moves from the data and picks a random number
     let moveSet = data.moves;
     let randomNum1 = Math.random();
-    let num1 = Math.floor(randomNum1 * moveSet.length-1);
+    let num1 = Math.floor(randomNum1 * moveSet.length - 1);
     // Use number to pick random move
     let pokemonMove2 = (data.moves[num1].move.name);
-    // Assign move to h4
-    let h4 = document.querySelector('#pokemon-2-move');
-    h4.innerText = pokemonMove2;
     // Return sprite to image
     let pokemonSprite = data.sprites.front_default;
     let pokemonImage = document.querySelector("#pokemon-2-image");
     pokemonImage.setAttribute("src", pokemonSprite);
+    moveArray2.push(pokemonMove2);
 }
+
+
+// Create function which is called in "Fight" button click
+//  - Create fight button
+//  - Create inline function with event listener
+//  - Create element to display attack points
+
+
+// Create function which tracks pokemon HP and takes attack points from total HP
+//  - When pokemon HP reaches 0, confirm box OR something on HTML to state who won and if you want to play again
+
+
+
+
+
+// console.log(pokemon1Move, pokemon2Move);
 
 // LOOK AT IS REFACTORING Separate Fight button
 //      - access the result of getPokemon function
