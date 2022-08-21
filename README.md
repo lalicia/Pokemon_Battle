@@ -24,3 +24,16 @@ The style of the app is intentionally retro, channelling old-school Nintendo DS 
 // fetch the first pokemon
 fetch("https://pokeapi.co/api/v2/pokemon/1/");
 ```
+
+## Tech
+
+This app uses:
+
+- HTML
+- JavaScript
+- CSS
+
+## Contributors
+
+- [@lalicia](https://www.github.com/lalicia)
+- [@MattDaviesDev](https://www.github.com/MattDaviesDev)
