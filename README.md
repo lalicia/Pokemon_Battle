@@ -36,4 +36,4 @@ This app uses:
 ## Contributors
 
 - [@lalicia](https://www.github.com/lalicia)
-- [@MattDaviesDev](https://www.github.com/MattDaviesDev)
+- [@DevMattDavies](https://www.github.com/DevMattDavies)
