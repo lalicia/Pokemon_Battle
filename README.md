@@ -10,6 +10,8 @@ From there, we brainstormed what we could make with our knowledge of JavaScript,
 
 ## The Build
 
+<img src="./screenshot.JPG" alt="battle screenshot" width="750px" />
+
 We decided to use the [Pokemon API](https://pokeapi.co/) and create a Pokemon Battle game that would generate selections for two players, determine skills from the API result, and return random score values for each player to 'battle' them. A message then pops up onscreen to tell you which Pokemon won.
 
 The style of the app is intentionally retro, channelling old-school Nintendo DS (and earlier) games.
